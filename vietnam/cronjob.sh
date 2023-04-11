@@ -1,2 +1,2 @@
 source /root/.bash_profile
-python /root/vietnam/notify.py
+python /root/Trading-Notifications/vietnam/notify.py
