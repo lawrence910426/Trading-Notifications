@@ -14,13 +14,13 @@ while not (today.weekday() == 3 and 15 <= today.day <= 21):
 
 message = "[Dividend Infomation in Vietnam]\n"
 cum_dividend = 0
-with open("/root/Trading-Notifications/vietnam/VN30.csv", 'r') as file:
+with open("/home/lawrence910426/Trading-Notifications/vietnam/VN30.csv", 'r') as file:
     csvreader = csv.reader(file)
     for row in csvreader:
         if row[0] in dates:
             message += f"date: {row[0]}, dividend: {row[1]}\n"
             cum_dividend += float(row[1])
-message += f"Total Dividend: {cum_dividend}\n"
+message = f"Total Dividend: {cum_dividend}\n" + message
 
 print(message)
 notify.send(message)
